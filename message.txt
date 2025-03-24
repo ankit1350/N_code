@@ -1,0 +1,4 @@
+the class describe two things
+1. the class is a blueprint for creating objects
+2. the class is a blueprint for creating objects
+ak
