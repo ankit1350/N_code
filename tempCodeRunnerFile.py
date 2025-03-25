@@ -1,25 +1,21 @@
-class complex:
-    def __init__(self,r=0.0,i=0.0):
-        self.__real=r
-        self.__imag=i
-    def __eq__(self,other):
-        if self.__real==other.__real and self.__imag==other.__imag:
-            return True
-        else:
-            return False
-        
-c1=complex(1.1,0.3)
-c2=complex(1.1,0.3)
-c3=c1
-if c1==c2:
-    print('attributes of c1 and c2 are equal')
-else:
-    print('attributes of c1 and c2 are not equal')
-if type(c1)==type(c3):
-    print('c1 and c3 are of same type')
-else:
-    print('c1 and c3 are of different type.')
-if c1 is c3:
-    print('c1 and c3 are pointing to the same object')
-else:
-    print('c1 and c3 are not pointing to the same object')
+with open ("message.txt","w")as f:
+    f.write("the class describe two things\n"
+    "1. the class is a blueprint for creating objects\n"
+    "2. the class is a blueprint for creating objects\n"
+    )
+with open ("message.txt","rb")as f:
+    print(f.read())
+    print(f.tell())
+    print(f.readline())
+    print(f.seek(50,0))
+    
+    print(f.read())
+    print(f.seek(131,0))
+    print(f.seek(0,2))
+    print(f.seek(61,1))
+    print(f.seek(61,2))
+
+with open ("message.txt","a")as f:
+    f.write("ak")
+    print(f.read)
+    print(f.seek(0,0))
