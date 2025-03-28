@@ -1,16 +1,24 @@
-import pyautogui
-import os
-import time
+# Diamond Problem in Multiple Inheritance
 
-# Optional delay before screenshot
-time.sleep(2)  
+class A:
+    def display(self):
+        print("Display method from class A")
 
-# Capture the screenshot
-screenshot = pyautogui.screenshot()
+class B(A):
+    def display(self):
+        print("Display method from class B")
 
-# Save the screenshot
-save_path = "screenshot.png"
-screenshot.save(save_path)
+class C(A):
+    def display(self):
+        print("Display method from class C")
 
-# Print the saved location
-print("Screenshot saved at:", os.path.abspath(save_path))
+class D(B, C):
+    def display(self):
+        super().display()
+        B.display(self)
+        C.display(self)
+        print(D.__mro__)
+
+# Creating an object of class D
+obj = D()
+obj.display()  # Resolves using Method Resolution Order (MRO)
