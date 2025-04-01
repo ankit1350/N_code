@@ -42,4 +42,3 @@ def calculate_percentage_from_file():
 # Example call
 calculate_percentage_from_file()
 
-print(getcwd())
