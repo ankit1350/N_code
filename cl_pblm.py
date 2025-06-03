@@ -1,13 +1,12 @@
 class Number:
     def set_number(self,n):
-        self.__num=n
-    def get__number(self):
-        return self.__num
+        self.num=n
+    def get_number(self):
+        return self.num
     def print_number(self):
-        print(self.__num)
+        print(self.num)
 
 a=Number()
 a.set_number(25)
-a.get__number()
-a.print_number()
-        
+a.get_number()
+a.print_number()     
